@@ -23,7 +23,7 @@ header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10}
 .btn{display:inline-block;background:var(--gold);color:#221A02;font-weight:700;padding:11px 20px;border-radius:999px}
 .btn-wa{display:inline-block;background:var(--green);color:#fff;font-weight:700;padding:12px 22px;border-radius:999px}
 .btn-wa-sm{display:inline-block;background:var(--green);color:#fff;font-weight:700;padding:9px 16px;border-radius:999px;font-size:14px}
-.hero{background:linear-gradient(135deg,var(--navy),var(--navy2) 60%,#14345F);color:#fff;padding:60px 0 56px}
+.hero{background:linear-gradient(rgba(10,27,51,.86),rgba(16,41,79,.80)),url(images/hero-hp.jpg) center/cover no-repeat;color:#fff;padding:60px 0 56px}
 .hero h1{font-size:40px;line-height:1.12;text-wrap:balance}
 .hero h1 span{color:#F4C84A}
 .hero p{font-size:17px;opacity:.92;max-width:560px;margin:12px 0 22px}
@@ -42,6 +42,11 @@ h2{font-size:28px;color:var(--navy);margin-bottom:6px;text-wrap:balance}
 .cat{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.04em}
 .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
 .info .card b{display:block;color:var(--navy);margin-bottom:2px}
+img{max-width:100%}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gallery figure{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.gallery img{width:100%;height:220px;object-fit:cover;display:block}
+.gallery figcaption{padding:12px 16px;font-weight:700;font-size:15px;color:var(--navy)}
 .dark{background:var(--navy);color:#fff}
 .dark h2{color:#fff}
 .dark .sub{color:#C7D2E4}
@@ -51,7 +56,7 @@ footer{background:#081227;color:#9FB0C9;padding:26px 0;font-size:14px;text-align
 </head>
 <body>
 <div class="demo-bar">Ini contoh website — dibuat oleh <a href="https://cj-kreasi.vercel.app/">CJ Kreasi</a>. Suka website seperti ini? <a href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20website%20seperti%20contoh%20Toko%20HP">Pesan di sini →</a></div>
-<header><div class="nav"><a class="brand" href="#top">Berkah <span>Cell</span></a><nav class="navlinks"><a href="#hp">HP</a><a href="#aksesoris">Aksesoris</a><a href="#layanan">Layanan</a><a href="#lokasi">Lokasi</a></nav><a class="btn" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20website%20seperti%20contoh%20Toko%20HP">Pesan Website Ini</a></div></header>
+<header><div class="nav"><a class="brand" href="#top">Berkah <span>Cell</span></a><nav class="navlinks"><a href="#hp">HP</a><a href="#galeri">Galeri</a><a href="#aksesoris">Aksesoris</a><a href="#layanan">Layanan</a><a href="#lokasi">Lokasi</a></nav><a class="btn" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20website%20seperti%20contoh%20Toko%20HP">Pesan Website Ini</a></div></header>
 <main id="top">
 <section class="hero"><div class="wrap">
 <h1>HP Baru &amp; Second Bergaransi, <span>Harga Jujur.</span></h1>
@@ -69,6 +74,15 @@ footer{background:#081227;color:#9FB0C9;padding:26px 0;font-size:14px;text-align
 <div class="card"><span class="tag-green">SECOND • MULUS</span><h3>Oppo A3x (Second)</h3><p class="spec">4/64GB • Fullset • Garansi toko 1 bulan</p><div class="price">Rp1.299.000</div><a class="btn-wa-sm" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20website%20seperti%20contoh%20Toko%20HP">Order via WA</a></div>
 <div class="card"><span class="tag-green">SECOND • MULUS</span><h3>Vivo Y03 (Second)</h3><p class="spec">4/64GB • Fullset • Baterai awet</p><div class="price">Rp1.099.000</div><a class="btn-wa-sm" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20website%20seperti%20contoh%20Toko%20HP">Order via WA</a></div>
 <div class="card"><span class="tag">PALING LARIS</span><h3>Redmi 13C</h3><p class="spec">8/256GB • Layar 90Hz • Kamera 50MP</p><div class="price">Rp1.899.000</div><a class="btn-wa-sm" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20website%20seperti%20contoh%20Toko%20HP">Order via WA</a></div>
+</div>
+</div></section>
+<section id="galeri" style="padding-top:10px"><div class="wrap">
+<h2>Galeri</h2>
+<p class="sub">HP dan aksesoris di Berkah Cell — semua unit dicek dulu sebelum dijual.</p>
+<div class="gallery">
+<figure><img src="images/galeri-hp-tangan.jpg" alt="Tangan mengetik pesan di smartphone" loading="lazy"><figcaption>Mengetik di HP</figcaption></figure>
+<figure><img src="images/galeri-case.jpg" alt="Kios yang menjual case dan aksesoris HP" loading="lazy"><figcaption>Case HP</figcaption></figure>
+<figure><img src="images/galeri-charger.jpg" alt="Kabel charger USB berwarna putih" loading="lazy"><figcaption>Kabel Charger</figcaption></figure>
 </div>
 </div></section>
 <section id="aksesoris" style="padding-top:10px"><div class="wrap">
@@ -100,5 +114,6 @@ footer{background:#081227;color:#9FB0C9;padding:26px 0;font-size:14px;text-align
 </div></section>
 </main>
 <footer><p><b>Berkah Cell</b> — Toko HP &amp; Aksesoris Kendari • © 2026</p><p style="margin-top:4px">Website contoh oleh <a href="https://cj-kreasi.vercel.app/" style="color:#F4C84A">CJ Kreasi</a></p></footer>
+<!-- Foto: hero tangan memegang smartphone (Flickr, CC-BY); galeri mengetik di HP (Flickr, CC-BY), case HP (Flickr, CC-BY), kabel charger (Flickr, CC-BY). Foto contoh gratis — pelanggan memakai foto usahanya sendiri. -->
 </body>
 </html>
