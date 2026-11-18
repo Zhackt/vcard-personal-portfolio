@@ -1,9 +1,9 @@
-// Penangkap tes webhook CJ Kreasi v2 — SEMENTARA, hanya untuk diagnosis.
+// Penangkap/relay tes webhook CJ Kreasi v3 — SEMENTARA, hanya untuk diagnosis.
 // GET: echo hub.challenge kalau verify token cocok (verifikasi Meta).
-// POST: teruskan body ke webhook.site; balas 'forwarded' kalau terusannya 2xx, 'forward-failed' kalau tidak.
+// POST: teruskan body mentah ke webhook bot Altare; balas 'relayed' kalau terusannya 2xx, 'relay-failed' kalau tidak.
 // HAPUS file ini + kembalikan webhook ke bot setelah tes selesai.
 const https = require('https');
-const FORWARD_URL = 'https://webhook.site/0c1c0353-c27e-451a-914a-ee19b53a9853';
+const FORWARD_URL = 'https://cj-kreasi-bot-cloud.go.altare.global/webhook';
 const VERIFY_TOKEN = 'cj-kreasi-verify';
 
 function forward(body) {
@@ -24,13 +24,13 @@ module.exports = async (req, res) => {
       res.status(200).send(q['hub.challenge'] || '');
       return;
     }
-    res.status(200).send('catcher ok v2');
+    res.status(200).send('catcher ok v3');
     return;
   }
   if (req.method === 'POST') {
     const body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body || {});
     const ok = await forward(body);
-    res.status(200).send(ok ? 'forwarded' : 'forward-failed');
+    res.status(200).send(ok ? 'relayed' : 'relay-failed');
     return;
   }
   res.status(405).send('method not allowed');
