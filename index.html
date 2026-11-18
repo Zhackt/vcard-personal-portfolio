@@ -19,6 +19,9 @@
 <meta name="twitter:image" content="https://cj-kreasi.vercel.app/og-image.png">
 <meta name="theme-color" content="#0A1B33">
 <title>CJ Kreasi — Jasa CV, Desain &amp; Website | Promo Diskon 40%</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0A1B33;--navy2:#10294F;--navy3:#14345F;--gold:#DFAE1F;--gold2:#F4C84A;--ink:#17233B;--mut:#5B6B85;--bg:#F5F7FA;--line:#E3E9F1;--green:#22C15E;--green-d:#157347;--red:#D92D20;--red-bg:#FEF3F2}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -39,8 +42,10 @@ section{scroll-margin-top:84px}
 /* Header */
 header{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.18)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;max-width:1080px;margin:0 auto}
-.brand{font-weight:800;font-size:22px;white-space:nowrap}
-.brand b{color:var(--gold2)}
+.brand{font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;font-size:27px;white-space:nowrap;letter-spacing:.5px}
+.brand b{color:#fff}
+.brand .grad-gold,.hero h1 .grad-gold{background:linear-gradient(120deg,#FFE08A 0%,#F4C84A 45%,#E8A93D 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .grad-gold{filter:drop-shadow(0 2px 14px rgba(244,200,74,.28))}
 .navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:14.5px}
 .navlinks a{padding:4px 2px;border-radius:6px}
 .navlinks a:hover{color:var(--gold2)}
@@ -53,7 +58,7 @@ header{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;box-sh
 .btn-sm{padding:9px 16px;font-size:14.5px}
 /* Hero */
 .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,var(--navy3) 100%);color:#fff;padding:60px 0 56px}
-.hero h1{font-size:44px;line-height:1.12;margin:12px 0 12px}
+.hero h1{font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:800;font-size:52px;line-height:1.12;margin:12px 0 12px;letter-spacing:-.5px}
 .hero h1 span{color:var(--gold2)}
 .hero p.lead{font-size:18px;opacity:.94;max-width:640px}
 .badge{display:inline-block;background:rgba(244,200,74,.16);color:var(--gold2);border:1px solid rgba(244,200,74,.45);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700}
@@ -144,18 +149,18 @@ footer{background:#081227;color:#9FB0C9;padding:28px 0;font-size:14px}
 footer a{text-decoration:underline;text-underline-offset:2px}
 .float-wa{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--green);color:#fff;font-weight:800;padding:13px 18px;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:background-color .15s ease}
 .float-wa:hover{background:#1da851}
-@media(max-width:640px){.hero h1{font-size:32px}h2{font-size:25px}.navlinks{display:none}.price-big{font-size:26px}}
+@media(max-width:640px){.hero h1{font-size:36px}h2{font-size:25px}.navlinks{display:none}.price-big{font-size:26px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
 <a class="skip" href="#layanan">Lewati ke layanan</a>
 <div class="promobar">🔥 <b>PROMO PERKENALAN: Diskon 40% paket website pilihan</b> — hanya untuk <b>5 pelanggan pertama</b>. <a href="#promo">Ambil promonya →</a></div>
-<header><div class="nav"><a class="brand" href="#top">CJ <b>Kreasi</b></a><nav class="navlinks" aria-label="Navigasi utama"><a href="#promo">Promo</a><a href="#layanan">Layanan</a><a href="#harga">Harga</a><a href="#portofolio">Portofolio</a><a href="#order">Cara Order</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a></nav><a class="btn btn-sm" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20order">Chat WhatsApp</a></div></header>
+<header><div class="nav"><a class="brand" href="#top"><span class="grad-gold">CJ</span> <b>Kreasi</b></a><nav class="navlinks" aria-label="Navigasi utama"><a href="#promo">Promo</a><a href="#layanan">Layanan</a><a href="#harga">Harga</a><a href="#portofolio">Portofolio</a><a href="#order">Cara Order</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a></nav><a class="btn btn-sm" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20order">Chat WhatsApp</a></div></header>
 <main id="top">
 <section class="hero"><div class="wrap">
 <span class="badge">JASA CV • DESAIN • WEBSITE</span>
-<h1>CJ Kreasi — <span>Semua Beres di Satu Tempat.</span></h1>
+<h1><span class="grad-gold">CJ Kreasi</span><br><span>Semua Beres di Satu Tempat.</span></h1>
 <p class="lead">Jasa CV, Desain &amp; Website — praktis dari HP. CV ATS-Friendly, admin sosmed UMKM, poster, brosur, katalog, sampai website usaha. Harga jelas, tanpa biaya tersembunyi.</p>
 <div class="chips"><span class="chip">✓ ATS-Friendly</span><span class="chip">✓ Praktis dari HP</span><span class="chip">✓ Gratis Revisi 2x</span><span class="chip">✓ Harga Jelas</span><span class="chip">✓ Proses Cepat</span></div>
 <div class="cta-row"><a class="btn-wa" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20order">Chat WhatsApp — 0812-5629-6337</a><a class="btn-ghost" href="#promo">Lihat Promo 40%</a></div>
