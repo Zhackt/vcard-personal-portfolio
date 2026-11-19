@@ -238,6 +238,42 @@
       .web-note { margin-top: 22px; font-size: 14px; color: var(--ink-2); max-width: 62em; }
       .web-note strong { color: var(--ink); }
 
+      /* ---------- Tabel perbandingan paket website ---------- */
+      .compare { margin-top: 44px; }
+      .compare-head { max-width: 640px; margin-bottom: 20px; }
+      .compare-head h3 { font-size: clamp(30px, 4.6vw, 44px); margin: 10px 0 8px; }
+      .compare-head p { color: var(--ink-2); font-size: 15.5px; }
+      .compare-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; font-size: 14.5px; }
+      .compare-table th, .compare-table td { padding: 13px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); line-height: 1.5; }
+      .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: none; }
+      .compare-table thead th { background: var(--surface-2); font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 21px; letter-spacing: 0.02em; line-height: 1.15; }
+      .compare-table thead th .cmp-price { display: block; font-family: "Archivo", sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 0; margin-top: 5px; font-variant-numeric: tabular-nums; }
+      .compare-table thead th .cmp-was { display: block; font-family: "Archivo", sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: 0; color: var(--ink-3); text-decoration: line-through; margin-top: 4px; font-variant-numeric: tabular-nums; }
+      .compare-table tbody th { font-weight: 700; color: var(--ink); width: 19%; background: var(--surface); }
+      .compare-table td { color: var(--ink-2); width: 20.25%; }
+      .compare-table td.yes { color: var(--ink); }
+      .compare-table .cmp-pop { background: var(--dark); color: var(--dark-ink); }
+      .compare-table thead th.cmp-pop { background: var(--dark); color: var(--dark-ink); }
+      .compare-table thead th.cmp-pop .cmp-was { color: color-mix(in srgb, var(--dark-ink) 60%, transparent); }
+      .compare-table td.cmp-pop { color: color-mix(in srgb, var(--dark-ink) 84%, transparent); }
+      .compare-table td.cmp-pop.yes { color: var(--dark-ink); }
+      .cmp-badge { display: inline-block; font-family: "Archivo", sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; background: var(--gold); color: #fff8ea; border-radius: 999px; padding: 4px 10px; margin-bottom: 7px; }
+      .compare-table .btn { width: 100%; min-height: 44px; padding: 9px 12px; font-size: 13.5px; }
+      .compare-note { margin-top: 16px; font-size: 14px; color: var(--ink-2); max-width: 62em; display: grid; gap: 6px; }
+      .compare-note strong { color: var(--ink); }
+      @media (max-width: 760px) {
+        .compare-table, .compare-table thead, .compare-table tbody, .compare-table tr, .compare-table th, .compare-table td { display: block; width: 100%; }
+        .compare-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+        .compare-table tbody th { border-bottom: none; padding: 16px 16px 4px; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+        .compare-table td { border-bottom: none; padding: 7px 16px 7px 30px; position: relative; }
+        .compare-table td::before { content: attr(data-paket); position: static; display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1px; margin-left: -14px; }
+        .compare-table td.cmp-pop { background: var(--surface); color: var(--ink-2); }
+        .compare-table td.cmp-pop.yes { color: var(--ink); }
+        .compare-table tbody tr { border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+        .compare-table tbody tr:last-child { border-bottom: none; }
+        .compare-table .btn { margin-top: 4px; }
+      }
+
       /* ---------- Kartu harga layanan lain (CV, Desain, Admin) ---------- */
       .web-grid-3 { grid-template-columns: repeat(3, 1fr); }
       @media (max-width: 1020px) { .web-grid-3 { grid-template-columns: 1fr 1fr; } }
@@ -256,6 +292,8 @@
       .contoh .body { padding: 16px 18px 20px; }
       .contoh .body h3 { font-size: 16.5px; margin-bottom: 5px; }
       .contoh .body p { font-size: 14px; color: var(--ink-2); }
+      .contoh-ctx { display: inline-block; font-size: 12.5px; font-weight: 700; line-height: 1.45; color: var(--gold); background: var(--gold-soft); border-radius: 999px; padding: 5px 11px; margin: 2px 0 10px; }
+      @media (prefers-color-scheme: dark) { .contoh-ctx { color: var(--gold-2); } }
       .cv-paper { background: #fff; color: #22242a; margin: 16px 18px 0; border: 1px solid #e4ddcb; border-radius: 6px; padding: 20px 20px 16px; box-shadow: 0 10px 24px -14px rgba(29,21,8,.35); }
       .cv-paper .nm { font-family: "Bebas Neue", sans-serif; font-size: 27px; letter-spacing: .02em; color: #14161c; }
       .cv-paper .rl { font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #b07f27; margin-bottom: 10px; }
@@ -355,7 +393,8 @@
       .pf-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
       .pf-body .pkg { align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; background: var(--gold-soft); color: var(--gold); border-radius: 999px; padding: 5px 11px; margin-bottom: 12px; }
       @media (prefers-color-scheme: dark) { .pf-body .pkg { color: var(--gold-2); } }
-      .pf-body h3 { font-size: 27px; margin-bottom: 6px; }
+      .pf-body h3 { font-size: 27px; margin-bottom: 4px; }
+      .pf-ctx { font-size: 14px; font-weight: 700; line-height: 1.5; color: var(--gold); margin-bottom: 8px; }
       .pf-body p { font-size: 14.5px; color: var(--ink-2); }
       .pf-link { margin-top: auto; padding-top: 16px; font-weight: 800; font-size: 15px; color: var(--gold); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
       .pf-link:hover { text-decoration: underline; text-underline-offset: 4px; }
@@ -628,6 +667,109 @@
         </div>
         <p class="web-note">Cara ambil promo: chat WhatsApp, sebutkan paketnya, bayar DP 50% — sisanya setelah website jadi dan kamu setujui. <strong>Paket Website Skripsi tidak termasuk promo</strong> — harga mulai Rp2.000.000, tergantung fitur.</p>
 
+        <div class="compare reveal">
+          <div class="compare-head">
+            <span class="kicker">Bandingkan Paket</span>
+            <h3 class="display">Bedanya tiap paket, <span class="gold">sebelah-sebelahan</span></h3>
+            <p>Bingung pilih yang mana? Ini perbandingan fitur keempat paket website di atas — isinya persis seperti yang tertulis di tiap paket. Yang bertanda “—” artinya tidak tertulis di paket itu; kalau kamu butuh, tanya dulu via WhatsApp.</p>
+          </div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Fitur</span></th>
+                <th scope="col">Landing Page<span class="cmp-was">Rp500.000</span><span class="cmp-price">Rp300.000</span></th>
+                <th scope="col" class="cmp-pop"><span class="cmp-badge">Paling Populer</span>Company Profile<span class="cmp-was">Rp1.000.000</span><span class="cmp-price">Rp600.000</span></th>
+                <th scope="col">Toko Online / Katalog<span class="cmp-price">Rp1.500.000</span></th>
+                <th scope="col">Website Skripsi<span class="cmp-price">Mulai Rp2.000.000</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Jumlah halaman / bentuk</th>
+                <td data-paket="Landing Page" class="yes">1 halaman</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">3–5 halaman</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Katalog produk</td>
+                <td data-paket="Website Skripsi" class="yes">Sistem informasi · harga akhir tergantung fitur</td>
+              </tr>
+              <tr>
+                <th scope="row">Tombol WhatsApp</th>
+                <td data-paket="Landing Page" class="yes">Tombol chat WhatsApp langsung</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">Termasuk — semua fitur Landing Page</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Tombol order via WA di katalog</td>
+                <td data-paket="Website Skripsi">—</td>
+              </tr>
+              <tr>
+                <th scope="row">Katalog produk</th>
+                <td data-paket="Landing Page">—</td>
+                <td data-paket="Company Profile" class="cmp-pop">—</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Katalog produk + tombol order via WA</td>
+                <td data-paket="Website Skripsi">—</td>
+              </tr>
+              <tr>
+                <th scope="row">Formulir / form</th>
+                <td data-paket="Landing Page">Tanya via WhatsApp</td>
+                <td data-paket="Company Profile" class="cmp-pop">Tanya via WhatsApp</td>
+                <td data-paket="Toko Online / Katalog">Tanya via WhatsApp</td>
+                <td data-paket="Website Skripsi">Tanya via WhatsApp</td>
+              </tr>
+              <tr>
+                <th scope="row">Isi halaman</th>
+                <td data-paket="Landing Page" class="yes">Desain modern, enak dibuka dari HP</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">Profil usaha, layanan, galeri &amp; kontak</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Semua fitur Company Profile + katalog produk</td>
+                <td data-paket="Website Skripsi" class="yes">Sistem informasi sesuai tema skripsimu</td>
+              </tr>
+              <tr>
+                <th scope="row">Domain &amp; hosting</th>
+                <td data-paket="Landing Page" class="yes">Hosting + subdomain gratis — tanpa domain sendiri, alamatnya pakai subdomain cj-kreasi.vercel.app</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">Domain .com 1 tahun termasuk</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Domain .com 1 tahun termasuk</td>
+                <td data-paket="Website Skripsi">Tanya via WhatsApp</td>
+              </tr>
+              <tr>
+                <th scope="row">SEO dasar</th>
+                <td data-paket="Landing Page">—</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">SEO dasar biar gampang dicari Google</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Termasuk — semua fitur Company Profile</td>
+                <td data-paket="Website Skripsi">—</td>
+              </tr>
+              <tr>
+                <th scope="row">Login admin &amp; database</th>
+                <td data-paket="Landing Page">—</td>
+                <td data-paket="Company Profile" class="cmp-pop">—</td>
+                <td data-paket="Toko Online / Katalog">—</td>
+                <td data-paket="Website Skripsi" class="yes">Login admin + kelola data, database MySQL + laporan, panduan instalasi XAMPP &amp; penjelasan buat sidang</td>
+              </tr>
+              <tr>
+                <th scope="row">Estimasi pengerjaan</th>
+                <td data-paket="Landing Page" class="yes">1–3 hari</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">3–7 hari</td>
+                <td data-paket="Toko Online / Katalog" class="yes">5–10 hari</td>
+                <td data-paket="Website Skripsi" class="yes">7–14 hari</td>
+              </tr>
+              <tr>
+                <th scope="row">Revisi</th>
+                <td data-paket="Landing Page" class="yes">Revisi 2x gratis</td>
+                <td data-paket="Company Profile" class="cmp-pop yes">Revisi 2x gratis</td>
+                <td data-paket="Toko Online / Katalog" class="yes">Revisi 2x gratis</td>
+                <td data-paket="Website Skripsi" class="yes">Revisi 2x gratis</td>
+              </tr>
+              <tr>
+                <th scope="row">Order paket ini</th>
+                <td data-paket="Landing Page"><a class="btn btn-ghost" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20ambil%20PROMO%20Landing%20Page%20Rp300.000" target="_blank" rel="noopener">Ambil Promo Ini</a></td>
+                <td data-paket="Company Profile" class="cmp-pop"><a class="btn btn-gold" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20ambil%20PROMO%20Company%20Profile%20Rp600.000" target="_blank" rel="noopener">Ambil Promo Ini</a></td>
+                <td data-paket="Toko Online / Katalog"><a class="btn btn-ghost" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20pesan%20Toko%20Online%20Rp1.500.000" target="_blank" rel="noopener">Pesan Toko Online</a></td>
+                <td data-paket="Website Skripsi"><a class="btn btn-ghost" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20tanya%20Website%20Skripsi" target="_blank" rel="noopener">Tanya Website Skripsi</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="compare-note">
+            <p><strong>Soal domain:</strong> untuk paket yang sudah termasuk domain .com (Company Profile &amp; Toko Online), domainnya didaftarkan atas nama kamu sebagai pelanggan dan dibeli dari DP 50% yang kamu bayar — jadi domain itu milikmu, bukan milik kami.</p>
+            <p><strong>Tanpa domain sendiri:</strong> websitemu tetap langsung online memakai subdomain gratis cj-kreasi.vercel.app, seperti alamat contoh-contoh di bagian Portofolio. Domain sendiri bisa ditambahkan belakangan.</p>
+            <p><strong>Yang bertanda “—” atau “Tanya via WhatsApp”</strong> artinya fitur itu tidak tertulis di paketnya — bukan ditebak-tebak. Chat dulu saja, nanti kami jelaskan bisa atau tidaknya sebelum kamu order.</p>
+          </div>
+        </div>
+
         <div class="plan-block-head reveal">
           <span class="kicker">Layanan &amp; Harga</span>
           <h3 class="display">Harga CV, Desain &amp; <span class="gold">Admin Sosmed</span></h3>
@@ -807,6 +949,7 @@
             <div class="pf-body">
               <span class="pkg">Contoh Company Profile</span>
               <h3 class="display">Tuah Barbershop</h3>
+              <p class="pf-ctx">Barbershop — daftar layanan &amp; harga, galeri, booking WhatsApp</p>
               <p>Website barbershop premium: daftar layanan &amp; harga transparan, galeri hasil potongan, profil barber, testimoni, sampai booking kursi via WhatsApp.</p>
               <a class="pf-link" href="https://cj-kreasi.vercel.app/demo/barbershop/" target="_blank" rel="noopener">Lihat contoh <span aria-hidden="true">→</span></a>
             </div>
@@ -819,6 +962,7 @@
             <div class="pf-body">
               <span class="pkg">Contoh Landing Page</span>
               <h3 class="display">Kopi Sore — Warung Kopi</h3>
+              <p class="pf-ctx">Warung kopi — menu &amp; harga, jam buka, order via WhatsApp</p>
               <p>Landing page warung kopi: menu favorit dengan harga, galeri, jam buka, dan tombol pesan via WhatsApp. Ringan dan enak dibuka dari HP.</p>
               <a class="pf-link" href="https://cj-kreasi.vercel.app/demo/warung-kopi/" target="_blank" rel="noopener">Lihat contoh <span aria-hidden="true">→</span></a>
             </div>
@@ -831,6 +975,7 @@
             <div class="pf-body">
               <span class="pkg">Contoh Company Profile</span>
               <h3 class="display">Cantika Beauty Studio — Salon &amp; Perawatan</h3>
+              <p class="pf-ctx">Salon kecantikan — daftar layanan &amp; harga, galeri, booking WhatsApp</p>
               <p>Profil salon lengkap: layanan unggulan dengan harga, galeri, testimoni pelanggan, dan booking perawatan via WhatsApp.</p>
               <a class="pf-link" href="https://cj-kreasi.vercel.app/demo/salon-cantik/" target="_blank" rel="noopener">Lihat contoh <span aria-hidden="true">→</span></a>
             </div>
@@ -843,6 +988,7 @@
             <div class="pf-body">
               <span class="pkg">Contoh Toko Online / Katalog</span>
               <h3 class="display">Berkah Cell — Toko HP</h3>
+              <p class="pf-ctx">Toko HP — katalog HP baru &amp; second bergaransi, aksesoris &amp; servis, order WhatsApp</p>
               <p>Katalog toko HP: daftar HP baru &amp; second ready stok dengan harga, aksesoris, layanan servis, dan order langsung via WhatsApp.</p>
               <a class="pf-link" href="https://cj-kreasi.vercel.app/demo/toko-hp/" target="_blank" rel="noopener">Lihat contoh <span aria-hidden="true">→</span></a>
             </div>
@@ -873,6 +1019,7 @@
             <div class="label"><span>Contoh CV</span><b>Rp50.000</b></div>
             <div class="body">
               <h3>CV ATS-Friendly</h3>
+              <span class="contoh-ctx">Contoh CV Fresh Graduate — target Staf Administrasi · format ATS-Friendly</span>
               <p>Rapi, singkat, dan mudah dibaca HRD maupun sistem ATS. File PDF siap kirim ke perusahaan tujuan.</p>
             </div>
           </article>
@@ -887,6 +1034,7 @@
             <div class="label"><span>Contoh Poster</span><b>Rp25.000</b></div>
             <div class="body">
               <h3>Poster Promo Usaha</h3>
+              <span class="contoh-ctx">Contoh poster promo — warung kopi, diskon 20% semua menu</span>
               <p>Poster promo yang langsung menarik perhatian pelanggan — siap posting ke sosmed atau dicetak.</p>
             </div>
           </article>
@@ -901,6 +1049,7 @@
             <div class="label"><span>Contoh Katalog</span><b>Rp199.000</b></div>
             <div class="body">
               <h3>Katalog Produk UMKM</h3>
+              <span class="contoh-ctx">Contoh katalog produk usaha — 8 halaman: foto produk, harga &amp; kontak</span>
               <p>Contoh katalog 8 halaman — foto produk, harga, dan kontak usaha. Pelanggan mudah memilih produkmu.</p>
             </div>
           </article>
@@ -1111,6 +1260,14 @@
           <details class="faq reveal">
             <summary>Saya tidak paham teknis, apakah dibantu?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
             <p class="a">Sangat dibantu. Kamu cukup cerita usahamu seperti apa lewat chat — kami yang susun kata-kata, desain, dan teknisnya sampai jadi.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>Bagaimana cara order kalau cuma pakai HP?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p class="a">Bisa banget — semua prosesnya lewat chat WhatsApp dari HP saja, tanpa perlu laptop. Kamu cukup klik tombol WhatsApp, sebutkan layanan yang kamu mau, lalu kirim datanya lewat chat. Sisanya kami yang kerjakan semuanya sampai jadi, dan hasilnya kami kirim balik ke HP kamu.</p>
+          </details>
+          <details class="faq reveal">
+            <summary>Data, foto, atau materi apa yang perlu disiapkan?<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p class="a">Tergantung layanannya. Buat CV: data diri, riwayat pendidikan, dan pengalaman kerja kalau ada. Buat desain: logo, foto, dan teks promosi kalau sudah ada. Buat website: info usaha, foto-foto, dan daftar produk atau layananmu. Belum lengkap juga tidak apa-apa — chat dulu saja, nanti kami pandu apa saja yang perlu dikirim.</p>
           </details>
         </div>
       </div>
