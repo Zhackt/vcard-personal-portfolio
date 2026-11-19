@@ -343,6 +343,18 @@
       .referral p { color: var(--ink-2); max-width: 44em; font-size: 15px; }
       .referral .pct { font-family: "Bebas Neue", sans-serif; font-size: 74px; color: var(--gold); line-height: 0.9; flex: none; }
 
+      /* ---------- Kebijakan refund ---------- */
+      .refund-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 20px; }
+      @media (max-width: 880px) { .refund-grid { grid-template-columns: 1fr; } }
+      .refund-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 22px; }
+      .refund-card h3 { font-size: 17px; margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
+      .refund-card h3 svg { width: 20px; height: 20px; color: var(--gold); flex: none; }
+      .refund-card h3 svg.no { color: var(--ink-3); }
+      .refund-card p { font-size: 14.5px; color: var(--ink-2); line-height: 1.6; }
+      .refund-card p strong { color: var(--ink); }
+      .refund-note { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; font-size: 15px; color: var(--ink-2); max-width: 62em; }
+      .refund-note strong { color: var(--ink); }
+
       /* ---------- FAQ ---------- */
       .faq-list { max-width: 780px; display: grid; gap: 12px; }
       details.faq { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
@@ -1190,6 +1202,32 @@
           </div>
           <a class="btn btn-dark" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20mau%20ikut%20program%20referral" target="_blank" rel="noopener">Ikut Program Referral</a>
         </div>
+      </div>
+    </section>
+
+    <section id="refund" style="padding-top:0">
+      <div class="wrap">
+        <div class="divider reveal" aria-hidden="true"><span></span></div>
+        <div class="sec-head reveal">
+          <span class="kicker">Kebijakan Pembatalan &amp; Refund</span>
+          <h2 class="display">Refund terbatas &amp; bersyarat — <span class="gold">jelas dari awal</span></h2>
+          <p>Aturan mainnya kami tulis terbuka di sini, biar kamu tenang dan kami juga kerja dengan tenang. Ini bukan garansi uang kembali bebas — refund hanya berlaku dalam kondisi tertentu di bawah ini.</p>
+        </div>
+        <div class="refund-grid">
+          <article class="refund-card reveal">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> CV &amp; Desain</h3>
+            <p>Pembayaran dilakukan <strong>setelah kamu melihat preview dan menyetujui hasilnya</strong> — jadi tidak ada uang yang masuk sebelum hasil disetujui.</p>
+          </article>
+          <article class="refund-card reveal">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Website &amp; Paket Bulanan</h3>
+            <p>DP 50% <strong>tidak dapat dikembalikan jika pekerjaan sudah dimulai</strong> — waktu dan tenaga sudah keluar. Refund hanya berlaku jika: (1) pekerjaan belum dimulai, atau (2) kami tidak sanggup menyelesaikan sesuai kesepakatan awal.</p>
+          </article>
+          <article class="refund-card reveal">
+            <h3><svg class="no" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg> Refund Tidak Berlaku Jika…</h3>
+            <p>Kamu <strong>berubah pikiran</strong>, tidak puas tanpa memberi kesempatan revisi (revisi 2x gratis sudah termasuk), atau tidak mengirim data/material yang dibutuhkan.</p>
+          </article>
+        </div>
+        <p class="refund-note reveal">Sebelum mulai, kami kirim <strong>ringkasan scope pekerjaan + ketentuan refund</strong> via WhatsApp. Kamu setuju → baru DP masuk. Jadi tidak ada refund sepihak, karena semuanya sudah jelas di awal.</p>
       </div>
     </section>
 
