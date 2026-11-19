@@ -99,6 +99,17 @@
       .promo-strip strong { color: var(--gold-2); }
       .promo-strip a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 
+      /* ---------- Badge sisa slot promo ---------- */
+      /* Angka slot di teks "Sisa 5 slot" — turunkan manual setiap ada pelanggan yang order. */
+      .slot-badge {
+        display: inline-flex; align-items: center; gap: 7px;
+        background: var(--gold); color: #fff8ea;
+        font-size: 12.5px; font-weight: 800; letter-spacing: 0.05em;
+        border-radius: 999px; padding: 4px 12px; white-space: nowrap; vertical-align: middle;
+      }
+      .slot-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff8ea; flex: none; }
+      .slot-badge-lg { font-size: 14px; padding: 7px 16px; }
+
       /* ---------- Nav ---------- */
       .nav {
         position: sticky; top: 0; z-index: 40;
@@ -389,7 +400,7 @@
   <body>
     <a class="skip-link" href="#main">Lewati ke konten utama</a>
     <div class="promo-strip">
-      🔥 <strong>Promo perkenalan: diskon 40%</strong> paket website pilihan — hanya untuk 5 pelanggan pertama. <a href="#website">Ambil promonya →</a>
+      🔥 <strong>Promo perkenalan: diskon 40%</strong> paket website pilihan — hanya untuk 5 pelanggan pertama. <span class="slot-badge">Sisa 5 slot</span> <a href="#website">Ambil promonya →</a>
     </div>
 
     <div class="nav">
@@ -549,6 +560,7 @@
           <span class="kicker">Promo Perkenalan</span>
           <h2 class="display">Diskon 40% — untuk <span class="gold">5 pelanggan pertama</span></h2>
           <p>Sebagai perkenalan, harga awal kami buat semurah mungkin. Diskon hanya untuk paket Landing Page dan Company Profile — setelah kuota habis, harga kembali normal. Siapa cepat, dia dapat.</p>
+          <p style="margin-top:16px"><span class="slot-badge slot-badge-lg">Sisa 5 slot</span></p>
         </div>
         <div class="web-grid">
           <article class="plan reveal">
