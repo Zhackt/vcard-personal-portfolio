@@ -276,6 +276,14 @@
       .pk-price b{font-size:1.3rem;font-weight:800;color:var(--gold);letter-spacing:-.01em}
       .pack.featured .pk-price{color:#d8d2bd}
       .pack.featured .pk-price b{color:var(--gold2)}
+      .pk-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:#1d1503;font-size:.68rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:5px 10px;border-radius:999px;margin-bottom:9px}
+      .pk-badge i{width:6px;height:6px;border-radius:50%;background:#1d1503;flex:none}
+      .pk-old{display:block;font-size:.92rem;font-weight:600;color:var(--ink3);text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--red);margin-bottom:1px}
+      .pack.featured .pk-old{color:#a8b2c2;text-decoration-color:#eda197}
+      .pk-now{display:block;font-size:1.65rem;font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--gold)}
+      .pack.featured .pk-now{color:var(--gold2)}
+      .pk-early-note{font-size:.78rem;font-weight:600;color:var(--ink2);margin-top:3px}
+      .pack.featured .pk-early-note{color:#d8d2bd}
       .pack .pk-desc{font-size:.85rem;line-height:1.6;margin-top:7px;color:var(--ink2)}
       .pack.featured .pk-desc{color:#d8d2bd}
       .pack ul{list-style:none;margin:16px 0 20px;padding:0;display:grid;gap:9px;font-size:.87rem}
@@ -699,7 +707,12 @@
           <div class="pack featured">
             <div class="pk-name">Paling Diminati</div>
             <h3>Jasa Pembuatan Custom</h3>
-            <div class="pk-price">Mulai dari <b>Rp1.500.000</b></div>
+            <div class="pk-price">
+              <span class="pk-badge"><i></i> Early Bird — 3 Slot Pertama</span>
+              <span class="pk-old">Rp1.500.000</span>
+              <span class="pk-now">Rp1.000.000</span>
+              <div class="pk-early-note">Harga perkenalan khusus 3 klien pertama — setelah itu kembali ke harga normal.</div>
+            </div>
             <p class="pk-desc">Dibangun khusus untuk brand konter Anda — logo, warna, nama domain, dan alur transaksi disesuaikan. Terima beres sampai online.</p>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Semua fitur Paket Source Code</li>
