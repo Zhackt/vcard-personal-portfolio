@@ -18,6 +18,8 @@
         --gold:#bd8a1e; --gold2:#e7bd4e; --gold-soft:#fdf0c9;
         --red:#c23a2e; --red-soft:#fdeae7;
         --amber:#9a6a12; --amber-soft:#fdf0cd;
+        --green:#15803d; --green-soft:#dcf2e3;
+        --cost:#8494ab;
         --shadow:0 18px 44px -18px rgba(13,30,52,.22);
         --shadow-sm:0 6px 18px -8px rgba(13,30,52,.18);
         --r-lg:20px; --r-md:14px; --r-sm:10px;
@@ -31,6 +33,8 @@
           --gold:#e7bd4e; --gold2:#f2d07c; --gold-soft:#3d3312;
           --red:#eda197; --red-soft:#452019;
           --amber:#eec26a; --amber-soft:#403311;
+          --green:#4ade80; --green-soft:#14351f;
+          --cost:#a9bcd4;
           --shadow:0 18px 44px -18px rgba(0,0,0,.55);
           --shadow-sm:0 6px 18px -8px rgba(0,0,0,.45);
         }
@@ -190,15 +194,17 @@
       td{padding:13px 18px;border-bottom:1px solid var(--line);vertical-align:middle}
       tr:last-child td{border-bottom:0}
       td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
-      .profit-pill{background:var(--navy-soft);color:var(--navy2);font-weight:800;font-size:.78rem;padding:4px 9px;border-radius:999px;white-space:nowrap}
-      @media (prefers-color-scheme: dark){.profit-pill{color:var(--gold2)}}
+      .profit-pill{background:var(--green-soft);color:var(--green);font-weight:800;font-size:.78rem;padding:4px 9px;border-radius:999px;white-space:nowrap}
+      td.cost-cell{color:var(--cost);font-weight:600}
+      dd.cost-cell{color:var(--cost)}
       .status{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:800;padding:5px 10px;border-radius:999px;white-space:nowrap}
       .status.ok{background:var(--navy-soft);color:var(--navy2)}
       @media (prefers-color-scheme: dark){.status.ok{color:var(--gold2)}}
       .status.pend{background:var(--amber-soft);color:var(--amber)}
       .status.fail{background:var(--red-soft);color:var(--red)}
       .empty-note{padding:34px 20px;text-align:center;color:var(--ink3);font-size:.9rem}
-      .group-row td{background:var(--navy-soft);color:var(--navy2);font-weight:800;font-size:.8rem;letter-spacing:.05em;padding:10px 18px}
+      .group-row td{background:var(--navy-soft);color:var(--navy2);font-weight:800;font-size:.8rem;letter-spacing:.05em;padding:15px 18px;border-top:3px solid var(--line2);border-bottom:1px solid var(--line2)}
+      tbody tr.group-row:first-child td{border-top:0}
       @media (prefers-color-scheme: dark){.group-row td{color:var(--gold2)}}
       .op-picker{margin-top:18px}
       .op-chips{display:flex;gap:8px;flex-wrap:wrap}
@@ -266,6 +272,10 @@
       .pack .pk-name{font-size:.74rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
       .pack.featured .pk-name{color:var(--gold2)}
       .pack h3{font-size:1.25rem;font-weight:800;margin-top:8px}
+      .pk-price{margin-top:9px;font-size:.92rem;font-weight:700;color:var(--ink2)}
+      .pk-price b{font-size:1.3rem;font-weight:800;color:var(--gold);letter-spacing:-.01em}
+      .pack.featured .pk-price{color:#d8d2bd}
+      .pack.featured .pk-price b{color:var(--gold2)}
       .pack .pk-desc{font-size:.85rem;line-height:1.6;margin-top:7px;color:var(--ink2)}
       .pack.featured .pk-desc{color:#d8d2bd}
       .pack ul{list-style:none;margin:16px 0 20px;padding:0;display:grid;gap:9px;font-size:.87rem}
@@ -684,11 +694,12 @@
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Panduan daftar API &amp; deposit server (PDF)</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Bantuan instalasi jarak jauh</li>
             </ul>
-            <button class="btn btn-ghost" data-order="Paket Source Code (Siap Pakai)" type="button">Minta Penawaran</button>
+            <a class="btn btn-ghost" data-order="Paket Source Code" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20tertarik%20dengan%20Paket%20Source%20Code%20CJ%20Store.%20Boleh%20info%20harga%20dan%20cara%20ordernya%3F%20Terima%20kasih." target="_blank" rel="noopener">Minta Penawaran</a>
           </div>
           <div class="pack featured">
             <div class="pk-name">Paling Diminati</div>
             <h3>Jasa Pembuatan Custom</h3>
+            <div class="pk-price">Mulai dari <b>Rp1.500.000</b></div>
             <p class="pk-desc">Dibangun khusus untuk brand konter Anda — logo, warna, nama domain, dan alur transaksi disesuaikan. Terima beres sampai online.</p>
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Semua fitur Paket Source Code</li>
@@ -697,7 +708,7 @@
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Harga bertingkat member &amp; agen</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Kami bantu sampai transaksi pertama berhasil</li>
             </ul>
-            <button class="btn btn-gold" data-order="Paket Jasa Pembuatan Custom" type="button">Minta Penawaran</button>
+            <a class="btn btn-gold" data-order="Paket Custom" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20tertarik%20dengan%20Paket%20Custom%20CJ%20Store.%20Boleh%20info%20harga%20dan%20cara%20ordernya%3F%20Terima%20kasih." target="_blank" rel="noopener">Minta Penawaran</a>
           </div>
           <div class="pack">
             <div class="pk-name">Paket Bisnis Lengkap</div>
@@ -709,10 +720,10 @@
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Multi-server (Digiflazz + cadangan)</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Prioritas dukungan setelah launching</li>
             </ul>
-            <button class="btn btn-ghost" data-order="Paket Bisnis Lengkap (Konter + Jaringan Agen)" type="button">Minta Penawaran</button>
+            <a class="btn btn-ghost" data-order="Paket Bisnis Lengkap" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20tertarik%20dengan%20Paket%20Bisnis%20Lengkap%20CJ%20Store.%20Boleh%20info%20harga%20dan%20cara%20ordernya%3F%20Terima%20kasih." target="_blank" rel="noopener">Minta Penawaran</a>
           </div>
         </div>
-        <p style="font-size:.83rem;color:var(--ink3);margin-top:14px;line-height:1.6">Klik “Minta Penawaran” untuk menyalin pesan siap kirim — tempelkan ke WhatsApp atau chat <b class="js-powered" style="color:var(--ink2)">CJ Kreasi</b>, konsultasi gratis tanpa wajib order.</p>
+        <p style="font-size:.83rem;color:var(--ink3);margin-top:14px;line-height:1.6">Klik “Minta Penawaran” — Anda langsung diarahkan ke WhatsApp <b class="js-powered" style="color:var(--ink2)">CJ Kreasi</b> dengan pesan yang sudah terisi otomatis. Konsultasi gratis, tanpa wajib order.</p>
       </section>
 
       <footer>
@@ -793,6 +804,7 @@
         merchantName: "Berkah Cell",      /* Nama konter pemilik (tampil di panel & struk) */
         merchantLocation: "Ereke, Buton Utara",
         poweredBy: "CJ Kreasi",           /* Kredit pembuat di footer */
+        waNumber: "6281256296337",        /* Nomor WhatsApp tujuan tombol "Minta Penawaran" */
 
         /* Pulsa: [harga modal, harga jual] per nominal, urut sesuai pulsaNominals */
         pulsaNominals: [5000,10000,15000,20000,25000,30000,50000,75000,100000],
@@ -1344,7 +1356,7 @@
         var nick = state.cat === "game" ? checkedNick() : null;
         if (nick) rows += '<div><dt>Nama Akun</dt><dd>' + nick.name + ' <span style="font-size:.72rem;color:var(--amber);font-weight:800">(contoh demo)</span></dd></div>';
         if (price){
-          rows += '<div><dt>Harga modal</dt><dd class="mono">' + rp(price.cost) + '</dd></div>' +
+          rows += '<div><dt>Harga modal</dt><dd class="mono cost-cell">' + rp(price.cost) + '</dd></div>' +
                   '<div><dt>Harga jual</dt><dd class="mono">' + rp(price.sell) + '</dd></div></dl>' +
                   '<div class="sum-total"><span>Total Bayar</span><b class="mono">' + rp(price.sell) + '</b></div>' +
                   '<div class="sum-profit">Keuntungan Anda dari transaksi ini: <b>' + rp(price.sell - price.cost) + '</b> — langsung tercatat di laporan harian.</div>';
@@ -1538,7 +1550,7 @@
           var tr = document.createElement("tr");
           tr.innerHTML = '<td><b>' + p.name + '</b><div style="font-size:.76rem;color:var(--ink3)">' + p.desc + '</div></td>' +
             '<td><span class="cell-label">Kategori</span>' + CAT_LABEL[p.cat] + '</td>' +
-            '<td class="num mono"><span class="cell-label">Modal</span>' + rp(p.cost) + '</td>' +
+            '<td class="num mono cost-cell"><span class="cell-label">Modal</span>' + rp(p.cost) + '</td>' +
             '<td class="num mono"><span class="cell-label">Jual</span><b>' + rp(p.sell) + '</b></td>' +
             '<td class="num"><span class="cell-label">Untung</span><span class="profit-pill">+' + rp(p.sell - p.cost) + '</span></td>';
           body.appendChild(tr);
@@ -1615,16 +1627,11 @@
         });
       }
 
-      /* ================= ORDER CTA ================= */
+      /* ================= ORDER CTA — LANGSUNG KE WHATSAPP ================= */
       document.querySelectorAll("[data-order]").forEach(function(b){
-        b.addEventListener("click", function(){
-          var pkg = b.getAttribute("data-order");
-          var msg = "Halo " + CONFIG.poweredBy + ", saya mau tanya-tanya dulu tentang " + pkg + " untuk website PPOB seperti demo " + CONFIG.storeName + ". Boleh info harga dan cara ordernya? Terima kasih.";
-          function done(){ toast("Pesan penawaran tersalin — tempel ke WhatsApp / chat " + CONFIG.poweredBy + " untuk mengirim."); }
-          if (navigator.clipboard && navigator.clipboard.writeText){
-            navigator.clipboard.writeText(msg).then(done, function(){ toast("Gagal menyalin otomatis. Pesan: " + msg); });
-          } else { toast("Pesan: " + msg); }
-        });
+        var pkg = b.getAttribute("data-order");
+        var msg = "Halo " + CONFIG.poweredBy + ", saya tertarik dengan " + pkg + " " + CONFIG.storeName + ". Boleh info harga dan cara ordernya? Terima kasih.";
+        b.setAttribute("href", "https://wa.me/" + CONFIG.waNumber + "?text=" + encodeURIComponent(msg));
       });
 
       /* ================= MOTION ================= */
