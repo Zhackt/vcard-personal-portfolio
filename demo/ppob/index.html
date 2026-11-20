@@ -290,6 +290,26 @@
       .pack li{display:flex;gap:9px;line-height:1.5}
       .pack li svg{flex:none;margin-top:2px;color:var(--gold)}
       .pack .btn{margin-top:auto;width:100%}
+      .pack li.pk-bonus{background:var(--gold-soft);border:1px solid var(--gold);border-radius:11px;padding:9px 11px}
+      .pack.featured li.pk-bonus{background:rgba(231,189,78,.16)}
+      .btn-share{padding:10px 14px}
+
+      /* ---------- Add-on APK ---------- */
+      .addon{margin-top:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#f4eedd;border:1px solid var(--gold);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 252px;gap:24px;align-items:center;position:relative;overflow:hidden}
+      .addon::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 210px at 10% 0%,rgba(231,189,78,.22),transparent 65%);pointer-events:none}
+      .addon-main{display:flex;gap:17px;align-items:flex-start;position:relative}
+      .addon-ico{width:54px;height:54px;border-radius:16px;background:var(--gold);color:#231a02;display:grid;place-items:center;flex:none;box-shadow:0 10px 22px -8px rgba(0,0,0,.5)}
+      .addon h3{font-size:1.22rem;font-weight:800;letter-spacing:-.01em;line-height:1.3}
+      .addon-desc{font-size:.9rem;line-height:1.65;color:#ddd6c2;margin-top:8px}
+      .addon-note{font-size:.8rem;line-height:1.55;color:#e3d193;margin-top:11px;display:flex;gap:7px}
+      .addon-note svg{flex:none;margin-top:2px;color:var(--gold2)}
+      .addon-side{position:relative;background:rgba(255,253,247,.07);border:1px solid rgba(231,189,78,.45);border-radius:16px;padding:18px}
+      .addon-price-label{font-size:.68rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#cdbd8a}
+      .addon-price{font-size:1.55rem;font-weight:800;letter-spacing:-.02em;color:var(--gold2);margin-top:4px}
+      .addon-promo{display:inline-flex;margin-top:9px;background:var(--gold);color:#1d1503;font-size:.74rem;font-weight:800;padding:6px 11px;border-radius:999px;line-height:1.35}
+      .addon-side .btn{width:100%;margin-top:15px}
+      @media (max-width:1020px){.addon{grid-template-columns:1fr}}
+      @media (max-width:560px){.addon{padding:20px}.addon-main{flex-direction:column}.btn-share .share-label{display:none}.btn-share{padding:10px 12px}}
       footer{margin-top:52px;border-top:1px solid var(--line);padding:26px 0 110px}
       .foot-in{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.83rem;color:var(--ink2)}
       .foot-in b{color:var(--ink)}
@@ -411,6 +431,7 @@
         </a>
         <div class="top-actions">
           <span class="demo-badge"><i></i> Mode Demo Interaktif</span>
+          <button class="btn btn-ghost btn-share" id="shareBtn" type="button" aria-label="Bagikan link demo ini"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg><span class="share-label">Bagikan</span></button>
           <button class="btn btn-gold" data-goto="order" type="button">Pesan Website Ini</button>
         </div>
       </div>
@@ -717,8 +738,8 @@
             <ul>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Semua fitur Paket Source Code</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Desain sesuai brand &amp; domain Anda sendiri</li>
+              <li class="pk-bonus"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> <span><b>BONUS:</b> Aplikasi Android (APK) dengan nama toko Anda <b>(Khusus 3 pendaftar pertama)</b></span></li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Deposit pelanggan + pembayaran otomatis</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Harga bertingkat member &amp; agen</li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Kami bantu sampai transaksi pertama berhasil</li>
             </ul>
             <a class="btn btn-gold" data-order="Paket Custom" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20tertarik%20dengan%20Paket%20Custom%20CJ%20Store.%20Boleh%20info%20harga%20dan%20cara%20ordernya%3F%20Terima%20kasih." target="_blank" rel="noopener">Minta Penawaran</a>
@@ -734,6 +755,23 @@
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Prioritas dukungan setelah launching</li>
             </ul>
             <a class="btn btn-ghost" data-order="Paket Bisnis Lengkap" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20tertarik%20dengan%20Paket%20Bisnis%20Lengkap%20CJ%20Store.%20Boleh%20info%20harga%20dan%20cara%20ordernya%3F%20Terima%20kasih." target="_blank" rel="noopener">Minta Penawaran</a>
+          </div>
+        </div>
+
+        <div class="addon reveal">
+          <div class="addon-main">
+            <span class="addon-ico" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
+            <div>
+              <h3>Add-on: Aplikasi Android (APK) Branding Toko</h3>
+              <p class="addon-desc">Punya aplikasi sendiri di HP dengan nama toko Anda. Ikon di layar HP, buka tanpa perlu ketik link. Cocok untuk pelanggan yang tidak terbiasa buka browser.</p>
+              <p class="addon-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Aplikasi di-install langsung oleh tim kami, ikon dan nama toko Anda sendiri di HP.</p>
+            </div>
+          </div>
+          <div class="addon-side">
+            <div class="addon-price-label">Tambah</div>
+            <div class="addon-price mono">Rp250.000</div>
+            <span class="addon-promo">Gratis untuk 3 klien pertama!</span>
+            <a class="btn btn-gold" href="https://wa.me/6281256296337?text=Halo%20CJ%20Kreasi%2C%20saya%20tertarik%20dengan%20Add-on%20Aplikasi%20Android%20(APK)%20Branding%20Toko%20untuk%20CJ%20Store%20(Rp250.000%2C%20gratis%20untuk%203%20klien%20pertama).%20Boleh%20info%20cara%20ordernya%3F%20Terima%20kasih." target="_blank" rel="noopener">Minta Penawaran</a>
           </div>
         </div>
         <p style="font-size:.83rem;color:var(--ink3);margin-top:14px;line-height:1.6">Klik “Minta Penawaran” — Anda langsung diarahkan ke WhatsApp <b class="js-powered" style="color:var(--ink2)">CJ Kreasi</b> dengan pesan yang sudah terisi otomatis. Konsultasi gratis, tanpa wajib order.</p>
@@ -1646,6 +1684,27 @@
         var msg = "Halo " + CONFIG.poweredBy + ", saya tertarik dengan " + pkg + " " + CONFIG.storeName + ". Boleh info harga dan cara ordernya? Terima kasih.";
         b.setAttribute("href", "https://wa.me/" + CONFIG.waNumber + "?text=" + encodeURIComponent(msg));
       });
+
+      /* ================= BAGIKAN DEMO ================= */
+      (function(){
+        var shareBtn = $("shareBtn");
+        if (!shareBtn) return;
+        var shareUrl = "https://cj-kreasi.vercel.app/demo/ppob/";
+        var shareText = "Lihat demo CJ Store — website PPOB premium untuk konter pulsa (pulsa, paket data, token PLN, e-wallet, top up game). Coba demonya di sini:";
+        function shareViaWhatsApp(){
+          window.open("https://wa.me/?text=" + encodeURIComponent(shareText + " " + shareUrl), "_blank");
+        }
+        shareBtn.addEventListener("click", function(){
+          if (navigator.share){
+            navigator.share({ title: CONFIG.storeName + " — Demo PPOB Premium", text: shareText, url: shareUrl }).catch(function(err){
+              if (err && err.name === "AbortError") return;
+              shareViaWhatsApp();
+            });
+          } else {
+            shareViaWhatsApp();
+          }
+        });
+      })();
 
       /* ================= MOTION ================= */
       var reducedMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
